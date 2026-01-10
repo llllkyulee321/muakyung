@@ -19,29 +19,30 @@ export default function LivingPage() {
     <main className="min-h-screen bg-neutral-100 text-neutral-900">
       {/* simple top nav on white */}
       <header className="sticky top-0 z-10 bg-neutral-100/85 backdrop-blur px-6 pt-6 pb-4">
-  <nav className="flex items-center gap-6 text-xs tracking-widest text-neutral-600">
-    {/* Home link */}
+  <div className="flex flex-col gap-3">
+    {/* Home link (top line) */}
     <Link
       href="/"
-      className="tracking-[0.35em] text-neutral-900 hover:opacity-70 transition"
+      className="text-xs tracking-[0.35em] text-neutral-900 hover:opacity-70 transition"
     >
       MUAKYUNG
     </Link>
 
-    {/* Divider (선택) */}
-    <span className="text-neutral-300">/</span>
-
-    {/* Section links */}
-    {nav.map((t) => (
-      <Link
-        key={t.label}
-        href={t.href}
-        className="hover:text-neutral-900 transition"
-      >
-        {t.label}
-      </Link>
-    ))}
-  </nav>
+    {/* Menu (second line) */}
+    <nav className="flex flex-wrap gap-x-6 gap-y-2 text-xs tracking-widest text-neutral-600">
+      {nav.map((t) => (
+        <Link
+          key={t.label}
+          href={t.href}
+          className={`hover:text-neutral-900 transition ${
+            t.label === "living" ? "text-neutral-900" : ""
+          }`}
+        >
+          {t.label}
+        </Link>
+      ))}
+    </nav>
+  </div>
 </header>
 
       {/* scenes */}

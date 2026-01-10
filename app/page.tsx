@@ -39,19 +39,31 @@ export default function Home() {
 
         {/* Bottom title */}
         <div className="absolute bottom-6 left-6">
-          <h1 className="text-sm tracking-[0.35em] text-neutral-50">
-            MUAKYUNG
-          </h1>
+          <h1 className="text-sm tracking-[0.35em] text-neutral-50">MUAKYUNG</h1>
           <p className="mt-1 text-xs tracking-widest text-neutral-100/70">
-            Hongcheon, Gangwon, Korea
+            Hongcheon, Gangwondo, Republic of Korea
           </p>
         </div>
 
-        {/* Scroll hint */}
-        <div className="absolute bottom-6 right-6 text-neutral-50/60 text-lg">
-  ⌄
+        {/* Instagram icon */}
+<div className="absolute bottom-6 right-6 z-10">
+  <a
+    href="https://www.instagram.com/mua.kyung"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-neutral-50/40 hover:text-neutral-50/70 transition"
+    aria-label="Instagram"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className="w-4 h-4"
+    >
+      <path d="M7.75 2h8.5C19.44 2 22 4.56 22 7.75v8.5C22 19.44 19.44 22 16.25 22h-8.5C4.56 22 2 19.44 2 16.25v-8.5C2 4.56 4.56 2 7.75 2zm0 1.5C5.4 3.5 3.5 5.4 3.5 7.75v8.5c0 2.35 1.9 4.25 4.25 4.25h8.5c2.35 0 4.25-1.9 4.25-4.25v-8.5c0-2.35-1.9-4.25-4.25-4.25h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm5.25-.75a1 1 0 110 2 1 1 0 010-2z" />
+    </svg>
+  </a>
 </div>
-
       </section>
 
       {/* SCENE 2: HOME TRACE (image + caption under it) */}
@@ -70,10 +82,8 @@ export default function Home() {
           {/* Caption (under image) */}
           <div className="mt-4 max-w-md">
             <p className="text-xs tracking-wide text-neutral-500">
-  HOME, AND WORK : Where living becomes the work.
-</p>
-
-
+              HOME, AND WORK : Where living becomes the work.
+            </p>
           </div>
         </div>
       </section>

@@ -39,27 +39,31 @@ export default function GatheringPage() {
     <main className="min-h-screen bg-neutral-100 text-neutral-900">
       {/* header */}
       <header className="sticky top-0 z-10 bg-neutral-100/85 backdrop-blur px-6 pt-6 pb-4">
-        <nav className="flex items-center gap-6 text-xs tracking-widest text-neutral-600">
-          <Link
-            href="/"
-            className="tracking-[0.35em] text-neutral-900 hover:opacity-70 transition"
-          >
-            MUAKYUNG
-          </Link>
-          <span className="text-neutral-300">/</span>
-          {nav.map((t) => (
-            <Link
-              key={t.label}
-              href={t.href}
-              className={`hover:text-neutral-900 transition ${
-                t.label === "gathering" ? "text-neutral-900" : ""
-              }`}
-            >
-              {t.label}
-            </Link>
-          ))}
-        </nav>
-      </header>
+  <div className="flex flex-col gap-3">
+    {/* Home link (top line) */}
+    <Link
+      href="/"
+      className="text-xs tracking-[0.35em] text-neutral-900 hover:opacity-70 transition"
+    >
+      MUAKYUNG
+    </Link>
+
+    {/* Menu (second line) */}
+    <nav className="flex flex-wrap gap-x-6 gap-y-2 text-xs tracking-widest text-neutral-600">
+      {nav.map((t) => (
+        <Link
+          key={t.label}
+          href={t.href}
+          className={`hover:text-neutral-900 transition ${
+            t.label === "living" ? "text-neutral-900" : ""
+          }`}
+        >
+          {t.label}
+        </Link>
+      ))}
+    </nav>
+  </div>
+</header>
 
       <section className="mx-auto w-full max-w-5xl px-6 pt-14 pb-24">
         {/* UPCOMING */}
