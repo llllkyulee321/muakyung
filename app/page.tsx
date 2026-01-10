@@ -48,9 +48,10 @@ export default function Home() {
         </div>
 
         {/* Scroll hint */}
-        <div className="absolute bottom-6 right-6 text-xs tracking-widest text-neutral-50/70">
-          scroll
-        </div>
+        <div className="absolute bottom-6 right-6 text-neutral-50/60 text-lg">
+  ⌄
+</div>
+
       </section>
 
       {/* SCENE 2: HOME TRACE (image + caption under it) */}
@@ -68,12 +69,11 @@ export default function Home() {
 
           {/* Caption (under image) */}
           <div className="mt-4 max-w-md">
-            <p className="text-xs tracking-widest text-neutral-500">
-              HOME, AND WORK
-            </p>
-            <p className="mt-2 text-base leading-relaxed text-neutral-800">
-              Where living becomes the work.
-            </p>
+            <p className="text-xs tracking-wide text-neutral-500">
+  HOME, AND WORK : Where living becomes the work.
+</p>
+
+
           </div>
         </div>
       </section>
