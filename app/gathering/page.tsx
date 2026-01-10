@@ -10,7 +10,7 @@ const nav = [
 const upcoming = {
   slug: "winter-story-2026",
   date: "2026.01.21",
-  title_en: "Winter Story",
+  title_en: "Winter Story: A conversation with the author, writing, in nature",
   title_kr: "겨울이야기: 《사랑해서 미워하고》 작가와의 만남",
   location: "MUAKYUNG, Hongcheon",
   status: "Open",
@@ -23,14 +23,14 @@ const archive = [
     date: "2025.10.18",
     title_en: "Autumn Resonance, the Season of Sound",
     title_kr: "〈가을의 공명〉",
-    note: "",
+    note: "Singingbowl, Sound Meditation",
   },
   {
     slug: "first-gathering-2025",
     date: "2025.07.11",
     title_en: "Muakyung First Gathering",
     title_kr: "〈나와 공간, 그 사이〉",
-    note: "Book Talk & Jazz live",
+    note: "Book Talk & Jazz Live",
   },
 ];
 
