@@ -4,9 +4,8 @@ import Link from "next/link";
 const nav = [
   { label: "living", href: "/living" },
   { label: "create", href: "/create" },
-  { label: "garden", href: "/garden" },
   { label: "gathering", href: "/gathering" },
-  { label: "rental", href: "/rental" },
+  { label: "space", href: "/space" },
 ];
 
 export default function Home() {
@@ -44,7 +43,7 @@ export default function Home() {
             MUAKYUNG
           </h1>
           <p className="mt-1 text-xs tracking-widest text-neutral-100/70">
-            A Hybrid Space
+            Hongcheon, Gangwon, Korea
           </p>
         </div>
 
