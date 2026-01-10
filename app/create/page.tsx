@@ -13,8 +13,6 @@ const works = [
   { id: 2, year: "2024" },
   { id: 3, year: "2025" },
   { id: 4, year: "2025" },
-  { id: 5, year: "2023" },
-  { id: 6, year: "2022" },
 ];
 
 export default function CreatePage() {

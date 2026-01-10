@@ -67,10 +67,6 @@ export default function LivingPage() {
           </div>
         ))}
 
-        {/* year (fixed bottom-right) */}
-<div className="fixed bottom-6 right-6 z-10">
-  <p className="text-xs tracking-[0.25em] text-neutral-500">2024</p>
-</div>
       </section>
     </main>
   );

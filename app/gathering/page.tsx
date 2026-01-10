@@ -14,7 +14,7 @@ const upcoming = {
   title_kr: "겨울이야기: 《사랑해서 미워하고》 작가와의 만남",
   location: "MUAKYUNG, Hongcheon",
   status: "Open",
-  apply_href: "#",
+  apply_href: "https://forms.gle/RLBBCLCttRzfioWa9",
 };
 
 const archive = [
@@ -30,7 +30,7 @@ const archive = [
     date: "2025.07.11",
     title_en: "Muakyung First Gathering",
     title_kr: "〈나와 공간, 그 사이〉",
-    note: "book talk & jazz live",
+    note: "Book Talk & Jazz live",
   },
 ];
 
@@ -93,16 +93,19 @@ export default function GatheringPage() {
             </p>
 
             <div className="pt-6 flex items-center gap-3">
-              <Link
-                href={upcoming.apply_href}
-                className="text-sm text-neutral-900 underline underline-offset-4 decoration-neutral-300 hover:decoration-neutral-700 transition"
-              >
-                Apply
-              </Link>
-              <span className="text-xs tracking-widest text-neutral-400">
-                {upcoming.status}
-              </span>
-            </div>
+  <a
+    href={upcoming.apply_href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-sm text-neutral-900 underline underline-offset-4 decoration-neutral-300 hover:decoration-neutral-700 transition"
+  >
+    Apply
+  </a>
+
+  <span className="text-xs tracking-widest text-neutral-400">
+    {upcoming.status}
+  </span>
+</div>
           </div>
         </div>
 
