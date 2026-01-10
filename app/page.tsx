@@ -73,7 +73,7 @@ export default function Home() {
               HOME, AND WORK
             </p>
             <p className="mt-2 text-base leading-relaxed text-neutral-800">
-              Where living quietly becomes the work.
+              Where living becomes the work.
             </p>
           </div>
         </div>
