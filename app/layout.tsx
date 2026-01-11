@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     siteName: "MUAKYUNG",
     images: [
       {
-        url: "/og.jpg", // ✅ 여기서는 상대경로로 두는 게 안전
+        url: "/og-v1.jpg", // ✅ 여기서는 상대경로로 두는 게 안전
         width: 1200,
         height: 630,
         alt: "MUAKYUNG",
