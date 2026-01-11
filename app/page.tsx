@@ -95,8 +95,6 @@ export default function Home() {
     <p className="mt-6">
       Contact.
       <br />
-      이상훈
-      <br />
       <a
         href="mailto:muakyung3892@naver.com"
         className="opacity-80 hover:opacity-100 transition"
@@ -108,7 +106,7 @@ export default function Home() {
         href="tel:01000000000"
         className="hover:text-neutral-900 transition"
       >
-        010-2827-7338
+        이상훈 010-2827-7338
       </a>
     </p>
   </div>
