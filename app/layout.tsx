@@ -1,3 +1,26 @@
+export const metadata = {
+  title: "MUAKYUNG | A Hybrid Space",
+  description:
+    "MUAKYUNG is a hybrid space of living, creating, gathering, and publishing — in nature.",
+
+  openGraph: {
+    title: "MUAKYUNG",
+    description:
+      "A hybrid space of home, studio, garden, gathering, and publishing.",
+    url: "https://muakyung.com",
+    siteName: "MUAKYUNG",
+    images: [
+      {
+        url: "https://muakyung.com/og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "MUAKYUNG",
+      },
+    ],
+    locale: "ko_KR",
+    type: "website",
+  },
+};
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
