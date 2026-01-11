@@ -9,7 +9,7 @@ const nav = [
 ];
 
 const scenes = [
-  { src: "/hero-01.jpg", caption: "Living" },
+  { src: "/hero-01-v2.jpg", caption: "Living" },
   { src: "/hero-02.jpg", caption: "Work" },
   { src: "/hero-03.jpg", caption: "In nature" },
 ];
@@ -44,15 +44,6 @@ export default function LivingPage() {
     </nav>
   </div>
 </header>
-
-{/* intro text */}
-<section className="mx-auto w-full max-w-5xl px-6 py-40">
-  <div className="max-w-md mx-auto text-center">
-    <p className="text-sm leading-relaxed text-neutral-700">
-      무아경은 집이자 작업실입니다.
-    </p>
-  </div>
-</section>
 
 
       {/* scenes */}

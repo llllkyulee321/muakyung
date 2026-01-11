@@ -39,10 +39,7 @@ export default function Home() {
 
         {/* Bottom title */}
         <div className="absolute bottom-6 left-6">
-          <h1 className="text-sm tracking-[0.35em] text-neutral-50">MUAKYUNG</h1>
-          <p className="mt-1 text-xs tracking-widest text-neutral-100/70">
-            Hongcheon, Gangwondo, Republic of Korea
-          </p>
+          <h1 className="text-sm tracking-[0.35em] text-neutral-50/70">MUAKYUNG</h1>
         </div>
 
         {/* Instagram icon */}
@@ -87,6 +84,35 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <footer className="mx-auto w-full max-w-5xl px-6 py-24">
+  <div className="text-xs leading-relaxed text-neutral-600">
+    <p className="tracking-[0.35em] text-neutral-900">MUAKYUNG</p>
+
+    <p className="mt-4">
+      Hongcheon, Gangwon-do, Republic of Korea
+    </p>
+
+    <p className="mt-6">
+      Contact.
+      <br />
+      이상훈
+      <br />
+      <a
+        href="mailto:muakyung3892@naver.com"
+        className="opacity-80 hover:opacity-100 transition"
+      >
+        muakyung3892@naver.com
+      </a>
+      <br />
+      <a
+        href="tel:01000000000"
+        className="hover:text-neutral-900 transition"
+      >
+        010-2827-7338
+      </a>
+    </p>
+  </div>
+</footer>
     </main>
   );
 }
