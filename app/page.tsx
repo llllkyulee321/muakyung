@@ -79,7 +79,7 @@ export default function Home() {
           {/* Caption (under image) */}
           <div className="mt-4 max-w-md">
             <p className="text-xs tracking-wide text-neutral-500">
-              HOME, AND WORK : Where living becomes the work.
+              HOME, and WORK : Where living becomes the work.
             </p>
           </div>
         </div>
