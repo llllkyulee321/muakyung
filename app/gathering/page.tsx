@@ -79,13 +79,8 @@ export default function GatheringPage() {
             </p>
 
             <h1 className="text-xl leading-relaxed text-neutral-900">
-              <Link
-                href={`/gathering/${upcoming.slug}`}
-                className="hover:underline underline-offset-4 decoration-neutral-300"
-              >
-                {upcoming.title_kr}
-              </Link>
-            </h1>
+  {upcoming.title_kr}
+</h1>
 
             <p className="text-sm tracking-wide text-neutral-600">
               {upcoming.title_en}
@@ -102,7 +97,7 @@ export default function GatheringPage() {
     rel="noopener noreferrer"
     className="text-sm text-neutral-900 underline underline-offset-4 decoration-neutral-300 hover:decoration-neutral-700 transition"
   >
-    Apply
+    Apply 안내 및 신청
   </a>
 
   <span className="text-xs tracking-widest text-neutral-400">
@@ -138,13 +133,8 @@ export default function GatheringPage() {
 
         <div className="max-w-3xl space-y-2">
           <p className="text-base leading-relaxed text-neutral-900">
-            <Link
-              href={`/gathering/${a.slug}`}
-              className="hover:underline underline-offset-4 decoration-neutral-300"
-            >
-              {a.title_en}
-            </Link>
-          </p>
+  {a.title_en}
+</p>
 
           <p className="text-sm tracking-wide text-neutral-600">{a.title_kr}</p>
 
