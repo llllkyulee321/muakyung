@@ -22,14 +22,7 @@ const works = [
     title: "Cat Tower",
     meta: "Handmade.",
     year: "2024",
-    src: "/create-cat-tower-v22.jpg",
-  },
-    {
-    id: "essay-2024",
-    title: "Essay",
-    meta: "2024.",
-    year: "2024",
-    src: "/create-essay-2024.jpg",
+    src: "/create-cat-tower-v222.jpg",
   },
   {
     id: "not-a-cat-tower",
@@ -37,6 +30,13 @@ const works = [
     meta: "", // intentionally blank
     year: "2024",
     src: "/create-not-a-cat-tower.jpg",
+  },
+  {
+    id: "essay-2024",
+    title: "Essay",
+    meta: "2024.",
+    year: "2024",
+    src: "/create-essay-2024.jpg",
   },
   {
     id: "notes",
