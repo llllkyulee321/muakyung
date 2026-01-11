@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+
 
 const nav = [
   { label: "living", href: "/living" },
@@ -87,6 +89,19 @@ export default function SpacePage() {
           </a>
         </div>
       </section>
+      
+      {/* space last image */}
+<div className="mt-20">
+  <div className="relative w-full aspect-[4/3] overflow-hidden">
+    <Image
+      src="/space-last.jpg"
+      alt="MUAKYUNG space"
+      fill
+      className="object-cover"
+      priority={false}
+    />
+  </div>
+</div>
     </main>
   );
 }

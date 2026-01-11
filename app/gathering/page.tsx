@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const nav = [
   { label: "living", href: "/living" },
@@ -23,7 +24,8 @@ const archive = [
     date: "2025.10.18",
     title_en: "Autumn Resonance, the Season of Sound",
     title_kr: "〈가을의 공명〉",
-    note: "Singingbowl, Sound Meditation",
+    note: "Sound Meditation",
+    image: "/gathering-autumn.jpg",
   },
   {
     slug: "first-gathering-2025",
@@ -31,6 +33,7 @@ const archive = [
     title_en: "Muakyung First Gathering",
     title_kr: "〈나와 공간, 그 사이〉",
     note: "Book Talk & Jazz Live",
+    image: "/gathering-first-v2.jpg",
   },
 ];
 
@@ -113,35 +116,47 @@ export default function GatheringPage() {
         <div className="my-16 h-px w-full bg-neutral-200" />
 
         {/* ARCHIVE */}
-        <div>
-          <p className="text-xs tracking-widest text-neutral-500">ARCHIVE</p>
+<div>
+  <p className="text-xs tracking-widest text-neutral-500">ARCHIVE</p>
 
-          <div className="mt-8 space-y-10">
-            {archive.map((a) => (
-              <div key={a.slug} className="max-w-3xl space-y-2">
-                <p className="text-sm tracking-wide text-neutral-600">
-                  {a.date}
-                </p>
-                <p className="text-base leading-relaxed text-neutral-900">
-                  <Link
-                    href={`/gathering/${a.slug}`}
-                    className="hover:underline underline-offset-4 decoration-neutral-300"
-                  >
-                    {a.title_en}
-                  </Link>
-                </p>
-                <p className="text-sm tracking-wide text-neutral-600">
-                  {a.title_kr}
-                </p>
-                {a.note && (
-                  <p className="text-sm tracking-wide text-neutral-500">
-                    {a.note}
-                  </p>
-                )}
-              </div>
-            ))}
-          </div>
+  <div className="mt-10 space-y-16">
+    {archive.map((a) => (
+      <div key={a.slug} className="max-w-5xl space-y-5">
+        <p className="text-sm tracking-wide text-neutral-600">{a.date}</p>
+
+        {/* 16:6 image */}
+        <div className="relative w-full overflow-hidden bg-neutral-200 aspect-[16/6]">
+          {a.image ? (
+            <Image
+              src={a.image}
+              alt={a.title_en}
+              fill
+              className="object-cover"
+            />
+          ) : null}
         </div>
+
+        <div className="max-w-3xl space-y-2">
+          <p className="text-base leading-relaxed text-neutral-900">
+            <Link
+              href={`/gathering/${a.slug}`}
+              className="hover:underline underline-offset-4 decoration-neutral-300"
+            >
+              {a.title_en}
+            </Link>
+          </p>
+
+          <p className="text-sm tracking-wide text-neutral-600">{a.title_kr}</p>
+
+          {a.note ? (
+            <p className="text-sm tracking-wide text-neutral-500">{a.note}</p>
+          ) : null}
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
 
         {/* footnote */}
         <div className="mt-20">
