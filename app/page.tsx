@@ -37,10 +37,7 @@ export default function Home() {
           ))}
         </nav>
 
-        {/* Bottom title */}
-        <div className="absolute bottom-6 left-6">
-          <h1 className="text-sm tracking-[0.35em] text-neutral-50/70">MUAKYUNG</h1>
-        </div>
+
 
         {/* Instagram icon */}
 <div className="absolute bottom-6 right-6 z-10">
