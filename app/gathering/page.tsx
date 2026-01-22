@@ -8,17 +8,16 @@ const nav = [
   { label: "space", href: "/space" },
 ];
 
-const upcoming = {
-  slug: "winter-story-2026",
-  date: "2026.01.21",
-  title_en: "Winter Story: A conversation with the author, writing, in nature",
-  title_kr: "겨울이야기: 《사랑해서 미워하고》 작가와의 만남",
-  location: "MUAKYUNG, Hongcheon",
-  status: "Open",
-  apply_href: "https://forms.gle/RLBBCLCttRzfioWa9",
-};
-
 const archive = [
+  {
+    slug: "winter-story-2026",
+    date: "2026.01.21",
+    title_main: "《사랑해서 미워하고》 김선연 작가와의 만남",
+    title_sub: "〈겨울이야기〉",
+    subtitle_en: "A Conversation with the Author, Writing, in Nature",
+    image: "/gathering-winter.jpg",
+    type: "winter",
+  },
   {
     slug: "autumn-resonance-2025",
     date: "2025.10.18",
@@ -26,6 +25,7 @@ const archive = [
     title_kr: "〈가을의 공명〉",
     note: "Sound Meditation",
     image: "/gathering-autumn.jpg",
+    type: "default",
   },
   {
     slug: "first-gathering-2025",
@@ -34,121 +34,105 @@ const archive = [
     title_kr: "〈나와 공간, 그 사이〉",
     note: "Book Talk & Jazz Live",
     image: "/gathering-first-v2.jpg",
+    type: "default",
   },
 ];
 
 export default function GatheringPage() {
   return (
     <main className="min-h-screen bg-neutral-100 text-neutral-900">
-      {/* header */}
+      {/* HEADER */}
       <header className="sticky top-0 z-10 bg-neutral-100/85 backdrop-blur px-6 pt-6 pb-4">
-  <div className="flex flex-col gap-3">
-    {/* Home link (top line) */}
-    <Link
-      href="/"
-      className="text-xs tracking-[0.35em] text-neutral-900 hover:opacity-70 transition"
-    >
-      MUAKYUNG
-    </Link>
+        <div className="flex flex-col gap-3">
+          <Link
+            href="/"
+            className="text-xs tracking-[0.35em] text-neutral-900 hover:opacity-70 transition"
+          >
+            MUAKYUNG
+          </Link>
 
-    {/* Menu (second line) */}
-    <nav className="flex flex-wrap gap-x-6 gap-y-2 text-xs tracking-widest text-neutral-600">
-      {nav.map((t) => (
-        <Link
-          key={t.label}
-          href={t.href}
-          className={`hover:text-neutral-900 transition ${
-            t.label === "living" ? "text-neutral-900" : ""
-          }`}
-        >
-          {t.label}
-        </Link>
-      ))}
-    </nav>
-  </div>
-</header>
+          <nav className="flex flex-wrap gap-x-6 gap-y-2 text-xs tracking-widest text-neutral-600">
+            {nav.map((t) => (
+              <Link
+                key={t.label}
+                href={t.href}
+                className={`hover:text-neutral-900 transition ${
+                  t.label === "gathering" ? "text-neutral-900" : ""
+                }`}
+              >
+                {t.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+      </header>
 
+      {/* CONTENT */}
       <section className="mx-auto w-full max-w-5xl px-6 pt-14 pb-24">
-        {/* UPCOMING */}
-        <div className="max-w-2xl">
-          <p className="text-xs tracking-widest text-neutral-500">UPCOMING</p>
+        <p className="text-xs tracking-widest text-neutral-500">ARCHIVE</p>
 
-          <div className="mt-6 space-y-2">
-            <p className="text-sm tracking-wide text-neutral-600">
-              {upcoming.date}
-            </p>
+        <div className="mt-10 space-y-20">
+          {archive.map((a) => (
+            <div key={a.slug} className="space-y-5">
+              {/* Date */}
+              <p className="text-sm tracking-wide text-neutral-600">
+                {a.date}
+              </p>
 
-            <h1 className="text-xl leading-relaxed text-neutral-900">
-  {upcoming.title_kr}
-</h1>
+              {/* Image */}
+              <div className="relative w-full overflow-hidden bg-neutral-200 aspect-[16/6]">
+                {a.image && (
+                  <Image
+                    src={a.image}
+                    alt="gathering image"
+                    fill
+                    className="object-cover"
+                  />
+                )}
+              </div>
 
-            <p className="text-sm tracking-wide text-neutral-600">
-              {upcoming.title_en}
-            </p>
+              {/* Text */}
+              <div className="max-w-3xl space-y-2">
+                {a.type === "winter" ? (
+                  <>
+                    {/* Main title */}
+                    <p className="text-base leading-relaxed text-neutral-900">
+                      {a.title_main}
+                    </p>
 
-            <p className="pt-2 text-sm text-neutral-600">
-              {upcoming.location}
-            </p>
+                    {/* Sub title */}
+                    <p className="text-sm tracking-wide text-neutral-600">
+                      {a.title_sub}
+                    </p>
 
-            <div className="pt-6 flex items-center gap-3">
-  <a
-    href={upcoming.apply_href}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-sm text-neutral-900 underline underline-offset-4 decoration-neutral-300 hover:decoration-neutral-700 transition"
-  >
-    Apply 안내 및 신청
-  </a>
+                    {/* English subtitle */}
+                    <p className="text-sm tracking-wide text-neutral-500">
+                      {a.subtitle_en}
+                    </p>
+                  </>
+                ) : (
+                  <>
+                    <p className="text-base leading-relaxed text-neutral-900">
+                      {a.title_en}
+                    </p>
 
-  <span className="text-xs tracking-widest text-neutral-400">
-    {upcoming.status}
-  </span>
-</div>
-          </div>
+                    <p className="text-sm tracking-wide text-neutral-600">
+                      {a.title_kr}
+                    </p>
+
+                    {a.note && (
+                      <p className="text-sm tracking-wide text-neutral-500">
+                        {a.note}
+                      </p>
+                    )}
+                  </>
+                )}
+              </div>
+            </div>
+          ))}
         </div>
 
-        {/* divider */}
-        <div className="my-16 h-px w-full bg-neutral-200" />
-
-        {/* ARCHIVE */}
-<div>
-  <p className="text-xs tracking-widest text-neutral-500">ARCHIVE</p>
-
-  <div className="mt-10 space-y-16">
-    {archive.map((a) => (
-      <div key={a.slug} className="max-w-5xl space-y-5">
-        <p className="text-sm tracking-wide text-neutral-600">{a.date}</p>
-
-        {/* 16:6 image */}
-        <div className="relative w-full overflow-hidden bg-neutral-200 aspect-[16/6]">
-          {a.image ? (
-            <Image
-              src={a.image}
-              alt={a.title_en}
-              fill
-              className="object-cover"
-            />
-          ) : null}
-        </div>
-
-        <div className="max-w-3xl space-y-2">
-          <p className="text-base leading-relaxed text-neutral-900">
-  {a.title_en}
-</p>
-
-          <p className="text-sm tracking-wide text-neutral-600">{a.title_kr}</p>
-
-          {a.note ? (
-            <p className="text-sm tracking-wide text-neutral-500">{a.note}</p>
-          ) : null}
-        </div>
-      </div>
-    ))}
-  </div>
-</div>
-
-
-        {/* footnote */}
+        {/* FOOTNOTE */}
         <div className="mt-20">
           <p className="text-xs tracking-wide text-neutral-500">
             Gatherings are held irregularly.
