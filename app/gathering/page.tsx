@@ -14,7 +14,7 @@ const archive = [
     date: "2026.01.21",
     title_main: "《사랑해서 미워하고》 김선연 작가와의 만남",
     title_sub: "〈겨울이야기〉",
-    subtitle_en: "A Conversation with the Author, Writing, in Nature",
+    subtitle_en: "A Conversation with the Author · Writing in Nature",
     image: "/gathering-winter.jpg",
     type: "winter",
   },
