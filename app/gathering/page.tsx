@@ -14,9 +14,9 @@ const upcoming = [
     slug: "writing-in-season-spring-2026",
     title: "간절기의 기록 · 봄",
     date: "2026. 3–5월",
-    description: "나의 리듬으로 쓰기를 이어가는 시간",
+    description: "나를 닮은 문장을 만나는 쓰기 과정 (현재 진행 중입니다)",
     image: "/gathering-spring.jpg", // ← public 폴더에 이미지 넣고 이름 맞추기
-    badge: "Soon",
+    badge: "In Progress",
   },
   // 필요하면 여기 아래에 계속 추가하면 됨
   // {

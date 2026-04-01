@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 
 const nav = [
   { label: "living", href: "/living" },
@@ -7,6 +7,30 @@ const nav = [
   { label: "gathering", href: "/gathering" },
   { label: "space", href: "/space" },
 ];
+
+// ✅ UPCOMING: 여러 개 가능
+const upcoming = [
+  {
+    slug: "writing-in-season-spring-2026",
+    title: "간절기의 기록 – 봄",
+    character: "Writing in Season",
+    description: ["계절마다", "함께 쓰고 머무는 자리입니다.", "나를 닮은 문장을 만나는 시간."],
+    image: "/gathering-spring.jpg", // public 폴더에 넣기
+    info: ["2026 Spring", "3–5월"],
+    status: "Soon",
+  },
+  // 필요하면 여기 아래에 계속 추가하면 됨
+  // {
+  //   slug: "...",
+  //   title: "...",
+  //   character: "...",
+  //   description: ["...", "..."],
+  //   image: "/....jpg",
+  //   info: ["....", "...."],
+  //   status: "Open" | "Soon" | "Closed",
+  // },
+];
+
 
 export default function Home() {
   return (
