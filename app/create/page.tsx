@@ -27,23 +27,25 @@ const works = [
   {
     id: "not-a-cat-tower",
     title: "It’s not a cat tower.",
-    meta: "", // intentionally blank
+    meta: "",
     year: "2024",
     src: "/create-not-a-cat-tower.jpg",
   },
   {
     id: "essay-2024",
     title: "Essay",
-    meta: "2024.",
+    meta: "『네가 원한다면 망설일 필요 없어』, 2024",
     year: "2024",
     src: "/create-essay-2024.jpg",
+    href: "https://smartstore.naver.com/muakyung",
   },
   {
-    id: "notes",
-    title: "Notes",
-    meta: "Soon.",
+    id: "essay-2026",
+    title: "Essay",
+    meta: "『간절기의 기록』, 2026",
     year: "2026",
-    src: "/create-notes.jpg",
+    src: "/create-essay-v2026.jpg",
+    href: "https://smartstore.naver.com/muakyung",
   },
 ];
 
@@ -53,7 +55,6 @@ export default function CreatePage() {
       {/* header */}
       <header className="sticky top-0 z-10 bg-neutral-100/85 backdrop-blur px-6 pt-6 pb-4">
         <div className="flex flex-col gap-3">
-          {/* Home link (top line) */}
           <Link
             href="/"
             className="text-xs tracking-[0.35em] text-neutral-900 hover:opacity-70 transition"
@@ -61,7 +62,6 @@ export default function CreatePage() {
             MUAKYUNG
           </Link>
 
-          {/* Menu (second line) */}
           <nav className="flex flex-wrap gap-x-6 gap-y-2 text-xs tracking-widest text-neutral-600">
             {nav.map((t) => (
               <Link
@@ -78,38 +78,74 @@ export default function CreatePage() {
         </div>
       </header>
 
-      {/* intro */}
-      <section className="mx-auto max-w-5xl px-6 pt-14 pb-8">
-        <p className="text-sm tracking-wide text-neutral-500">Things made here.</p>
+      {/* archive grid */}
+      <section className="mx-auto max-w-5xl px-6 pt-14 pb-24">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3">
+          {works.map((w) => {
+  const isLink = !!w.href;
+
+  return (
+    <div key={w.id} className="space-y-3">
+
+      {isLink ? (
+        <a
+          href={w.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block group"
+        >
+          <div className="relative aspect-[3/4] w-full overflow-hidden bg-neutral-200">
+            <Image
+              src={w.src}
+              alt={w.title}
+              fill
+              className="object-cover transition duration-300 group-hover:opacity-80"
+            />
+          </div>
+        </a>
+      ) : (
+        <div className="relative aspect-[3/4] w-full overflow-hidden bg-neutral-200">
+          <Image
+            src={w.src}
+            alt={w.title}
+            fill
+            className="object-cover"
+          />
+        </div>
+      )}
+
+      <div className="space-y-1">
+        <p className="text-sm text-neutral-800">{w.title}</p>
+        {w.meta ? (
+          <p className="text-xs tracking-wide text-neutral-500">
+            {w.meta}
+          </p>
+        ) : null}
+      </div>
+    </div>
+  );
+})}
+        </div>
       </section>
 
-      {/* archive grid */}
+      {/* bottom info (스토어 안내) */}
       <section className="mx-auto max-w-5xl px-6 pb-24">
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3">
-          {works.map((w) => (
-            <div key={w.id} className="space-y-3">
-              {/* image */}
-              <div className="relative aspect-[3/4] w-full overflow-hidden bg-neutral-200">
-                <Image
-                  src={w.src}
-                  alt={w.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
+        <p className="text-sm tracking-wide text-neutral-500">
+          Things made here.
+        </p>
 
-              {/* title + meta */}
-              <div className="space-y-1">
-                <p className="text-sm text-neutral-800">{w.title}</p>
-                {w.meta ? (
-                  <p className="text-xs tracking-wide text-neutral-500">
-                    {w.meta}
-                  </p>
-                ) : null}
-              </div>
-            </div>
-          ))}
-        </div>
+        <p className="text-sm text-neutral-500 mt-2">
+          무아경에서 만든 기록물은 온라인 스토어에서 살펴보실 수 있습니다.
+        </p>
+
+        <a
+          href="https://smartstore.naver.com/muakyung"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm underline underline-offset-4 mt-1 inline-block text-neutral-900 hover:opacity-70 transition"
+        >
+          Visit Store
+        </a>
       </section>
     </main>
   );
