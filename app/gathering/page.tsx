@@ -11,12 +11,12 @@ const nav = [
 // ✅ UPCOMING: 여러 개 가능
 const upcoming = [
   {
-    slug: "writing-in-season-spring-2026",
-    title: "간절기의 기록 · 봄",
-    date: "2026. 3–5월",
+    slug: "writing-in-season-autumn-2026",
+    title: "간절기의 기록 · 가을",
+    date: "2026. 9–11월",
     description: "나를 닮은 문장을 만나는 쓰기 과정",
-    image: "/gathering-spring.jpg", // ← public 폴더에 이미지 넣고 이름 맞추기
-    badge: "In Progress",
+    image: "/gathering-autumn-1.jpg", // ← public 폴더에 이미지 넣고 이름 맞추기
+    badge: "Soon",
   },
   // 필요하면 여기 아래에 계속 추가하면 됨
   // {
@@ -30,6 +30,14 @@ const upcoming = [
 ];
 
 const archive = [
+  {
+    slug: "writing-in-season-spring-2026",
+    date: "2026.03–05",
+    title_en: "Writing in Season",
+    title_kr: "〈간절기의 기록 · 봄〉",
+    note: "나를 닮은 문장을 만나는 쓰기 과정",
+    image: "/gathering-spring-1.jpg",
+  },
   {
     slug: "winter-story-2026",
     date: "2026.01.21",
@@ -85,9 +93,28 @@ export default function GatheringPage() {
             ))}
           </nav>
         </div>
-      </header>
+            </header>
 
       <section className="mx-auto w-full max-w-5xl px-6 pt-14 pb-24">
+
+        {/* intro */}
+        <div className="mb-16 max-w-md">
+          <p className="text-xs leading-relaxed text-neutral-500">
+            무아경에서 열리는 작은 자리들.
+            <br />
+
+            <a
+              href="https://blog.naver.com/PostList.naver?blogId=llllkyulee&from=postList&categoryNo=24"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-neutral-700 transition"
+            >
+              과정의 기록은 블로그에서 읽어볼 수 있습니다 →
+            </a>
+          </p>
+        </div>
+
+
         {/* UPCOMING */}
         <div>
           <p className="text-xs tracking-widest text-neutral-500">UPCOMING</p>

@@ -61,7 +61,24 @@ export default function Home() {
           ))}
         </nav>
 
+        {/* Letter */}
+        <div className="absolute bottom-6 left-6 z-10">
+  <p className="text-[11px] tracking-wide text-neutral-50/60">
+    무아경의 시간
+  </p>
 
+  <a
+    href="https://page.stibee.com/subscriptions/493644"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="mt-1 inline-block text-xs tracking-widest text-neutral-50/90 hover:text-neutral-50 transition"
+  >
+    구독하기 →
+  </a>
+</div>
+
+{/* Instagram icon */}
+<div className="absolute bottom-6 right-6 z-10"></div>
 
         {/* Instagram icon */}
 <div className="absolute bottom-6 right-6 z-10">
@@ -90,7 +107,7 @@ export default function Home() {
           {/* Image (square corners) */}
           <div className="relative aspect-[4/5] w-full overflow-hidden bg-neutral-200">
             <Image
-              src="/home.jpg"
+              src="/home-1.jpg"
               alt="A trace of living"
               fill
               className="object-cover saturate-[0.75] brightness-[1.03] contrast-[0.95]"
