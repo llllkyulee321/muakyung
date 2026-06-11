@@ -25,6 +25,13 @@ const works = [
     src: "/create-cat-tower-v222.jpg",
   },
   {
+    id: "wood-work-2026",
+    title: "Four Legs",
+    meta: "Woodwork.",
+    year: "2026",
+    src: "/create-woodwork.jpg",
+  },
+  {
     id: "not-a-cat-tower",
     title: "It’s not a cat tower.",
     meta: "",
